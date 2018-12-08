@@ -41,7 +41,7 @@ struct SettingValue
 };
 
 /** Maps setting names to values */
-typedef StringKeyedMaps<std::wstring, SettingValue>::UnorderedMultiMap SettingsMap;
+typedef StringKeyedMaps<std::wstring, SettingValue>::MultiMap SettingsMap;
 
 /** Maps setting names to iterators */
 typedef StringKeyedMaps<std::wstring, SettingsMap::iterator>::UnorderedMultiMap IteratorMap;
