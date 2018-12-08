@@ -50,7 +50,7 @@
 //
 // Missing constants and typedefs
 //
-#if defined(FIXUP_MINGW)
+#if defined(FIXUP_MINGW) && !defined(__MINGW32__)
 
 enum RESTRICTIONS
 {
@@ -89,12 +89,14 @@ typedef struct _SHELLHOOKINFO
 #    define SM_SERVERR2     89
 #  endif
 
+#if !defined(__MINGW32__)
 // Shell types
 typedef LPITEMIDLIST                PIDLIST_ABSOLUTE;
 typedef LPCITEMIDLIST               PCIDLIST_ABSOLUTE;
 
 typedef GUID                        KNOWNFOLDERID;
 typedef const KNOWNFOLDERID&        REFKNOWNFOLDERID;
+#endif
 
 // Known Folder IDs
 const KNOWNFOLDERID FOLDERID_QuickLaunch =
@@ -134,7 +136,7 @@ public:
     DynamicFunction(LPCSTR pszDll, LPCSTR pszExport)
     {
         m_pFunction = \
-            (Function)GetProcAddress(GetModuleHandle(pszDll), pszExport);
+            (Function)GetProcAddress(GetModuleHandleA(pszDll), pszExport);
 
         ASSERT(m_pFunction != NULL);
     }
@@ -164,15 +166,17 @@ typedef LPVOID  (WINAPI* SHLockShared_t)(HANDLE hData, DWORD dwProcessId);
 typedef BOOL    (WINAPI* SHUnlockShared_t)(LPVOID lpData);
 typedef BOOL    (WINAPI* IsOS_t)(DWORD);
 
-
+#if !defined(__MINGW32__)
 DEFINE_DYNFUNC_ORD(SHLockShared,        "shlwapi.dll", 8);
 DEFINE_DYNFUNC_ORD(SHUnlockShared,      "shlwapi.dll", 9);
+#endif
+
 DEFINE_DYNFUNC_ORD(IsOS,                "shlwapi.dll", 437);
 
 #endif // FIXUP_OLD_HEADERS
 
 
-#if defined(FIXUP_MINGW)
+#if defined(FIXUP_MINGW) && !defined(__MINGW32__)
 
 typedef BOOL             (WINAPI* SHFindFiles_t)(PCIDLIST_ABSOLUTE pidlFolder, PCIDLIST_ABSOLUTE pidlSaveFile);
 typedef PIDLIST_ABSOLUTE (WINAPI* ILCreateFromPath_t)(LPCSTR pszPath);
