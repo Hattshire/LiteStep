@@ -115,7 +115,7 @@ static const g_theDevTeam[] = \
 // LiteStep License Notice
 //
 static const WCHAR g_wzLicense[] = \
- L"LiteStep is a replacement shell for the standard Windows® Explorer shell.\r\n"
+ L"LiteStep is a replacement shell for the standard WindowsÂ® Explorer shell.\r\n"
  L"\r\n"
  L"Copyright (C) 1997-1998  Francis Gastellu\r\n"
  L"Copyright (C) 1998-2015  LiteStep Development Team\r\n"
