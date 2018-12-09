@@ -19,6 +19,7 @@
 // Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 //
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+#include <functional>
 #include "FullscreenMonitor.h"
 #include "../lsapi/lsapi.h"
 #include "../utility/debug.hpp"

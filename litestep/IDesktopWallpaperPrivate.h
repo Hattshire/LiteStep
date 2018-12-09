@@ -23,6 +23,7 @@
 #if !defined(IDESKTOPWALLPAPERPRIVATE_H)
 #define IDESKTOPWALLPAPERPRIVATE_H
 
+//#if !defined(__MINGW32__)
 //
 // The functions listed here, and their functionality are guesses, which were
 // obtained by examining how explorer handles these calls.
@@ -42,4 +43,5 @@ public:
     STDMETHOD(PrivateH) (LPVOID) = 0;
 };
 
+//#endif
 #endif // IDESKTOPWALLPAPERPRIVATE_H

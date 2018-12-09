@@ -20,9 +20,10 @@
 // Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 //
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+#include <functional>
 #include "COMService.h"
 #include "../utility/common.h"
-#include "../utility/shlobj.h"
+#include "../utility/shlobjw.h"
 #include "IDesktopWallpaper.h"
 #include "COMFactory.h"
 #include "../utility/debug.hpp"

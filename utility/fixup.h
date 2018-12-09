@@ -96,11 +96,11 @@ typedef LPCITEMIDLIST               PCIDLIST_ABSOLUTE;
 
 typedef GUID                        KNOWNFOLDERID;
 typedef const KNOWNFOLDERID&        REFKNOWNFOLDERID;
-#endif
 
 // Known Folder IDs
 const KNOWNFOLDERID FOLDERID_QuickLaunch =
 {0x52a4f021, 0x7b75, 0x48a9, {0x9f, 0x6b, 0x4b, 0x87, 0xa2, 0x10, 0xbc, 0x8f}};
+#endif
 
 // MMSystem.h
 #define SND_SYSTEM 0x00200000L

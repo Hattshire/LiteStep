@@ -29,8 +29,9 @@
 // with the post-XP toolkit).
 //
 
-#include "../utility/shlobj.h"
+#include "../utility/shlobjw.h"
 
+#if !defined(__MINGW32__)
 enum DESKTOP_SLIDESHOW_DIRECTION
 {
     DSD_FORWARD = 0,
@@ -81,4 +82,5 @@ class IDesktopWallpaper : public IUnknown
     STDMETHOD(Enable) (BOOL) = 0;
 };
 
+#endif
 #endif // IDESKTOPWALLPAPER_H

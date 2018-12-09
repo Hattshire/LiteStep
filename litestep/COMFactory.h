@@ -24,7 +24,7 @@
 #define COMFACTORY_H
 
 #include "../utility/common.h"
-#include "../utility/shlobj.h"
+#include "../utility/shlobjw.h"
 
 class COMFactory : public IClassFactory
 {

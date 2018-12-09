@@ -33,7 +33,7 @@
 */
 
 #include "../utility/common.h"
-#include "../utility/shlobj.h"
+#include "../utility/shlobjw.h"
 
 
 //-----------------------------------------------------------------------------

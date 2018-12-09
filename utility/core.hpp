@@ -31,7 +31,7 @@
 
 #include <shellapi.h>
 
-#include "shlobj.h"
+#include "shlobjw.h"
 
 // mainly used for Path helper functions
 #define STRICT_CONST
